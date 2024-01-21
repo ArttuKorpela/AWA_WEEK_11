@@ -16,10 +16,13 @@ function App() {
   return (
     <Suspense fallback="loading">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element= {<><Header t={t} changeLanguage={changeLanguage}/><MyContainer t={t}/></>}/>
-          <Route path="/about" element = {<><Header t={t} changeLanguage={changeLanguage}/><About/></>}/>
-        </Routes>
+        <div className="App">
+          <Header t={t} changeLanguage={changeLanguage}/>
+          <Routes>
+            <Route path="/" element= {<><MyContainer t={t}/></>}/>
+            <Route path="/about" element = {<><About/></>}/>
+          </Routes>
+        </div>
       </BrowserRouter>
       </Suspense>
   );

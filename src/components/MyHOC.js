@@ -1,7 +1,7 @@
 
 const MyHOC = (Component,props) => {
   
-  return Component({...props})
+  return (<div className="wrapper">{Component({...props})}</div>)
   
 }
 
