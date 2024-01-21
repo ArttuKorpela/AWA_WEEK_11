@@ -15,7 +15,7 @@ function App() {
   return (
     <Suspense fallback="loading">
       <BrowserRouter>
-        <Header t={t} changeLanguage={changeLanguage}/>
+        <Header id={"pg-header"} t={t} changeLanguage={changeLanguage}/>
         <Routes>
           <Route path="/" element= {<MyContainer t={t}/>}/>
           <Route path="/about" element = {<About/>}/>

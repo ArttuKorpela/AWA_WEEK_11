@@ -12,14 +12,14 @@ const Header = ({t,changeLanguage}) => {
       <AppBar position='static'>
         <Toolbar>
           <Button component={RouterLink} to={"/"} color='inherit'>
-          {t("home")}
+          {t ? t("home") : "Home"}
           </Button>
           <Button component={RouterLink} to={"/about"} color='inherit'>
-            {t("about")}
+            {t ? t("about"): "about"}
           </Button>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}/>
-          <Button onClick={()=>(changeLanguage("fi"))} color='inherit'>FI</Button>
-          <Button onClick={()=>(changeLanguage("en"))}color='inherit'>EN</Button>
+          <Button id ="fi" onClick={()=>(changeLanguage("fi"))} color='inherit'>FI</Button>
+          <Button id='en' onClick={()=>(changeLanguage("en"))}color='inherit'>EN</Button>
         </Toolbar>
       </AppBar>
     </Box>

@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const MyHOC = ({Component, name}) => {
+function MyHOC({Component, name}) {
   return (
     <div className='wrapper'>{<Component name={name}/>}</div>
   )
 }
+
+export default MyHOC
