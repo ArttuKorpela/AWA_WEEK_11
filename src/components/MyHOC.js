@@ -1,9 +1,13 @@
-import React from 'react'
 
-export const MyHOC = ({Component, name}) => {
-  return (
-    <div className='wrapper'>{<Component name={name}/>}</div>
-  )
+const MyHOC = (Component) => {
+  const NewComponent = (props) => {
+    return (
+      <Component name={props.name}/>
+    )
+  }
+  return NewComponent
+  
 }
 
+export default MyHOC;
 
