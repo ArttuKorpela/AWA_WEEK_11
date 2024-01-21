@@ -12,13 +12,13 @@ function App() {
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang)
   }
+  
   return (
     <Suspense fallback="loading">
-      <Header t={t} changeLanguage={changeLanguage}/>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element= {<MyContainer t={t}/>}/>
-          <Route path="/about" element = {<About/>}/>
+          <Route path="/" element= {<><Header t={t} changeLanguage={changeLanguage}/><MyContainer t={t}/></>}/>
+          <Route path="/about" element = {<><Header t={t} changeLanguage={changeLanguage}/><About/></>}/>
         </Routes>
       </BrowserRouter>
       </Suspense>

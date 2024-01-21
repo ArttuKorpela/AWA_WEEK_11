@@ -1,11 +1,7 @@
 
-const MyHOC = (Component) => {
-  const NewComponent = (props) => {
-    return (
-      <Component name={props.name}/>
-    )
-  }
-  return NewComponent
+const MyHOC = (Component,props) => {
+  
+  return Component({...props})
   
 }
 
